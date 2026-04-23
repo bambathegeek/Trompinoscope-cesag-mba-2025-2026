@@ -1,0 +1,1 @@
+# Trompinoscope-cesag-mba-2025-2026
