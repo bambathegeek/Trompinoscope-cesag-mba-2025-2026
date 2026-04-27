@@ -21,7 +21,7 @@ body{
 }
 .wrap{max-width:1550px;margin:0 auto;padding:26px}
 .hero{
-  position:sticky;top:0;z-index:20;background:linear-gradient(135deg,#006b3f 0%,#0f7f6d 45%,#1b85b6 100%);
+  position:relative;top:auto;z-index:1;background:linear-gradient(135deg,#006b3f 0%,#0f7f6d 45%,#1b85b6 100%);
   color:#fff;border-radius:30px;padding:28px;box-shadow:0 14px 36px rgba(0,0,0,.14);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px)
 }
 .hero h1{margin:0 0 6px;font-size:clamp(28px,3vw,42px);font-weight:900;letter-spacing:.2px}
@@ -67,6 +67,46 @@ body{
 @media (max-width:1100px){.top-grid{grid-template-columns:1fr}}
 @media (max-width:860px){.stats{grid-template-columns:repeat(2,1fr)} .filters{grid-template-columns:1fr} .wrap{padding:16px} .hero{padding:20px;border-radius:24px}}
 @media (max-width:520px){.stats{grid-template-columns:1fr} .grid{grid-template-columns:1fr} .program-title{font-size:22px}}
+
+/* ===== CORRECTION FINALE GITHUB PAGES : MENU + RESPONSIVE ===== */
+.hero{
+  position:relative !important;
+  top:auto !important;
+  z-index:1 !important;
+}
+.program-section{scroll-margin-top:24px;}
+
+@media screen and (max-width:1100px){
+  .top-grid{grid-template-columns:1fr !important;}
+}
+
+@media screen and (max-width:900px){
+  .wrap{padding:12px !important;}
+  .hero{padding:18px !important;border-radius:20px !important;}
+  .hero h1{font-size:26px !important;line-height:1.15 !important;}
+  .hero p{font-size:13px !important;}
+  .filters{grid-template-columns:1fr !important;}
+  .stats{grid-template-columns:repeat(2,1fr) !important;}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:14px !important;}
+  .card{padding:14px !important;border-radius:18px !important;}
+  .avatar{width:84px !important;height:84px !important;}
+  .name{font-size:17px !important;min-height:auto !important;}
+  .program{font-size:12px !important;min-height:auto !important;}
+  .info{grid-template-rows:none !important;gap:8px !important;}
+  .row{padding:9px 10px !important;}
+  .v{font-size:13px !important;}
+}
+
+@media screen and (max-width:560px){
+  .wrap{padding:10px !important;}
+  .grid{grid-template-columns:1fr !important;}
+  .stats{grid-template-columns:1fr !important;}
+  .program-head{align-items:flex-start !important;}
+  .program-title{font-size:21px !important;}
+  .card{max-width:100% !important;}
+  .avatar{width:80px !important;height:80px !important;}
+}
+
 </style>
 </head>
 <body>
